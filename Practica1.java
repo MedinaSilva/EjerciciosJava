@@ -60,6 +60,18 @@ public class Practica1 {
 			System.out.println("El año es no bisiesto");
 		
 	}
+
+	static void decimoTerceroMetodo (String cadena) {
+		
+		String resultado=cadena.replaceAll(" ", "");
+		
+		System.out.println(resultado);
+	}
+
+	static String decimoCuartoMetodo (String str) {
+		return new StringBuilder(str).reverse().toString();
+	}
+
 	
 	public static void main(String[] args) {
 		
@@ -71,6 +83,11 @@ public class Practica1 {
 		sextoMetodo(8,18);
 		septimoMetodo(5);
 		octavoMetodo(1992);
+
+		decimoTerceroMetodo("Hola Mundo");
+		String str = "Parangaricutirimicuaro";
+		str = decimoCuartoMetodo(str);
+		System.out.println("La cadena al revés quedaría como: " +str);
 	}
 
 }
