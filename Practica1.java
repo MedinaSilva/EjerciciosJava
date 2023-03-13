@@ -61,6 +61,35 @@ public class Practica1 {
 		
 	}
 
+	static void novenoMetodo(int max) {
+		boolean primo;
+		
+		// Estructura for
+		for (int num = 2; num <= max; num++) {
+			primo = true;
+			for (int i = num - 1; i > 1; i--) {
+				if (num % i == 0) {
+					primo = false;
+					break;
+				} // fin if
+			} // fin for
+			if (primo) {
+				System.out.println(num);
+			} // fin if
+		} // fin for
+	}
+
+	static int decimoSegundoMetodo(int num) {
+		if (num==0) {
+			return 0;
+		} else {
+			return decimoSegundoMetodo(num/10)+ num%10;
+		}
+		
+				
+	}
+
+
 	static void decimoTerceroMetodo (String cadena) {
 		
 		String resultado=cadena.replaceAll(" ", "");
@@ -83,6 +112,11 @@ public class Practica1 {
 		sextoMetodo(8,18);
 		septimoMetodo(5);
 		octavoMetodo(1992);
+		novenoMetodo(300);
+		
+		
+		int numero =123456;
+		System.out.println(decimoSegundoMetodo(numero));
 
 		decimoTerceroMetodo("Hola Mundo");
 		String str = "Parangaricutirimicuaro";
